@@ -7,4 +7,20 @@
 
 @import 'bootstrap/scss/bootstrap';
 
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --bg-primary: #09c2dd;
+    --bg-white: #ffffff;
+    --text-white: #f5f6f9;
+    --text-black: #222627;
+ }
+
+ body {
+    font-family: 'Poppins', 'sans-serif';
+    background-color: var(--bg-white);
+ }

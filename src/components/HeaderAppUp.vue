@@ -1,5 +1,5 @@
 <template>
-    <div class=" d-flex justify-content-around mt-2">
+    <div class=" d-flex justify-content-between  mt-2 ">
         <div class="d-flex justify-content-between ">
             <div class="px-2">
                 <i class="fa-solid fa-location-dot px-2 mt-1" style="color: #09c2dd;"></i>
@@ -39,6 +39,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 
     export default {
+        name: 'HeaderAppUp'
         
     }
 </script>
@@ -58,5 +59,8 @@ li{
 span {
     color: #5E5E5E;
 }
-
+span:hover{
+    color: #09c2dd;
+    cursor: pointer;
+}
 </style>

@@ -1,16 +1,19 @@
 <template>
     <HeaderAppUp/>
+    <HeaderAppDown />
 </template>
 
 <script>
-import { store } from './assets/data/store';
 
-import HeaderAppUp from './components/HeaderAppUp.vue';
+import HeaderAppUp from './components/HeaderAppUp.vue'
+import HeaderAppDown from './components/HeaderAppdown.vue'
+
 
   export default {
     name: 'App',
   components: {
     HeaderAppUp,
+    HeaderAppDown
     
   },
   }
