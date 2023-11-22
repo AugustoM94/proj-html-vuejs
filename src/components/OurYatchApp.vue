@@ -65,7 +65,10 @@
               </div>
             </div>
        </div>
-    </div>
+       <div class="center-btn">
+                <button class="btn">View All</button>
+      </div>
+ </div>
 </template>
 
 <script>
@@ -130,5 +133,20 @@ a{
     cursor: pointer;
 
 } 
+.center-btn {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
 
+.btn {
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: #09c2dd;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid white;
+    
+}
 </style>
