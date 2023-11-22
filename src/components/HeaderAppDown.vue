@@ -124,7 +124,7 @@ export default {
   },
 }
 </script>
-<style>
+<style lang="css" scoped>
 .carousel {
   position: relative;
   max-width: 100%;
