@@ -1,99 +1,129 @@
 <template>
-  <div class="carousel w-100">
+  <div class="carousel w-100 ">
     <transition name="fade">
-      <img
-        :key="currentIndex"
-        :src="images[currentIndex]"
-        alt="Carousel Image"
-        @mousedown="startAutoPlay"
-        @mouseup="stopAutoPlay"
-        @mouseleave="stopAutoPlay"
-        class="carousel-image"
-      />
+      <img :key="currentIndex" :src="images[currentIndex]" alt="Carousel Image" @mousedown="startAutoPlay" @mouseup="stopAutoPlay" @mouseleave="stopAutoPlay" class="carousel-image" />
     </transition>
 
     <div class="indicators">
-      <span
-        v-for="(image, index) in images"
-        :key="index"
-        @click.prevent.native="goToImage(index)"
-        :class="{ active: index === currentIndex }"
-      ></span>
+      <span v-for="(image, index) in images" :key="index" @click.prevent.native="goToImage(index)" :class="{ active: index === currentIndex }"></span>
     </div>
 
-    <div v-if="currentIndex === 0" class="overlay-menu row align-items-center mt-2">
-    </div>
-
-    <div v-if="currentIndex === 1" class="overlay-menu-2 row mt-4 text-white">
-      <div class="col-lg-12 text-center">
-        <h2>Flybridges, Convertibles, Expresses,<br> Sports Cruisers and more...</h2>
-        <p>we've got a beautiful variety at different types of yachts...</p>
-        <button class="btn">Yachts</button>
+    <div v-if="currentIndex === 0" class=" overlay-menu row align-items-center mt-2 ">
+      <div class="col-lg-3">
+              <img src="../assets/images/logo.png" alt="logo">
+        </div>
+        <div class="col-lg-6 ">
+            <ul  class="list-unstyled d-flex justify-content-between align-content-center mt-2 ">
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Services</a>
+                    </li>
+                      <li @mouseenter="toggleDropdown('Yachts')" class="dropdown">
+                       <a href="#">Yachts</a>                            
+                           <div class="dropdown-content">
+                              <ul>
+                                <li v-for="(submenuItem, index) in submenuItems" :key="index">                             
+                                    <a :href="submenuItem.link">{{ submenuItem.label }}</a>
+                                </li>                       
+                              </ul>
+                        </div>              
+                    </li>
+                    <li>
+                      <a href="#">Reservations</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+            </ul>
+            
+      <div class="col-lg-3 d-flex justify-content-end">
+        </div>
+            </div>
+         <div class="col-lg-3 d-flex justify-content-end   ">    
+               <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="titolo"> 
+                  <h1>QuickWind</h1>
+                  <p>all kinds of boats, yachts characters and sailing destinations <br> for hobbyst yachtsmen and women</p> 
+                  <button class="btn">Learn More</button>
+        </div>
       </div>
+      <div v-if="currentIndex === 1" class="overlay-menu-2 row mt-4 text-white ">
+          <div class="col-lg-12 text-center">
+                <h2>Flybridges, Convertibles, Expresses,<br> Sports Cruisers and more...</h2>
+                <p>we've got a beautiful variety at different types of yachts...</p>
+                <button class="btn">Yachts</button>
+          </div>
+        </div>
+        <div v-if="currentIndex === 2" class="overlay-menu-3 row mt-4 text-white ">
+          <div class="col-lg-12 text-center">
+                <h2>Corporate yatch chartering</h2>
+                <p>As far as our list of clients goes, a vast majority of those are private,hobbyst(and sometimes professional or retired professional)
+                  yachtsmen and <br> women, or racers. However, when it comes to organizing a corporate yatch charter of a Fortune 500 scale for a big crew
+                   of people-we will be able to make <br> it flawless!
+                </p>
+                <button class="btn">Yachts</button>
+          </div>
+        </div>
     </div>
-
-    <div v-if="currentIndex === 2" class="overlay-menu-3 row mt-4 text-white">
-      <div class="col-lg-12 text-center">
-        <h2>Corporate yacht chartering</h2>
-        <p>
-          As far as our list of clients goes, a vast majority of those are private, hobbyist
-          (and sometimes professional or retired professional) yachtsmen and women, or racers.
-          However, when it comes to organizing a corporate yacht charter of a Fortune 500 scale for a big crew
-          of people, we will be able to make it flawless!
-        </p>
-        <button class="btn">Yachts</button>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      images: [
-        '/src/assets/images/bg1-1.jpg',
-        '/src/assets/images/bg2.jpg',
-        '/src/assets/images/bg3.jpg',
-      ],
-      currentIndex: 0,
-      autoPlayInterval: null,
-      zoomed: false,
-      showSubmenu: false,
-      submenuItems: [
-        { label: 'Cruisers', link: '#' },
-        { label: 'Expresses', link: '#' },
-        { label: 'Sports Cruisers', link: '#' },
-        { label: 'Convertibles', link: '#' },
-        { label: 'Megayachts', link: '#' },
-        { label: 'Tri-Deck', link: '#' },
-        { label: 'Sedan Bridges', link: '#' },
-        { label: 'Flybridges', link: '#' },
-      ],
-    };
-  },
+  return {
+    images: [
+      '/src/assets/images/bg1-1.jpg',
+      '/src/assets/images/bg2.jpg',
+      '/src/assets/images/bg3.jpg',
+    ],
+    currentIndex: 0,
+    autoPlayInterval: null,
+    zoomed: false,
+    showSubmenu: false,
+    submenuItems: [
+      { label: 'Cruisers', link: '#' },
+      { label: 'Expresses', link: '#' },
+      { label: 'Sports Cruisers', link: '#' },
+      { label: 'Convertibles', link: '#' },
+      { label: 'Megayachts', link: '#' },
+      { label: 'Tri-Deck', link: '#' },
+      { label: 'Sedan Bridges', link: '#' },
+      { label: 'Flybridges', link: '#' },
+    ],
+  };
+},
   methods: {
     goToImage(index) {
       this.currentIndex = index;
-      this.zoomed = false;
+      this.zoomed = false; // Resetta lo zoom quando cambia l'immagine
     },
     startAutoPlay() {
-      this.changeImage(1);
+      this.changeImage(1); // Cambiare l'immagine subito quando inizia il click
     },
     stopAutoPlay() {
       // Lasciare vuoto, in quanto non vogliamo più cambiare immagini quando il click è rilasciato
     },
     changeImage(offset) {
+      // Verificare che il cambio immagine non vada oltre i limiti
       const newIndex = this.currentIndex + offset;
       if (newIndex >= 0 && newIndex < this.images.length) {
         this.currentIndex = newIndex;
-        this.zoomed = false;
+        this.zoomed = false; // Resettare lo zoom quando cambia l'immagine
       }
     },
+    toggleDropdown(menuItem) {
+      this.showSubmenu = menuItem === 'Yachts';
+      
+    },
   },
-};
+}
 </script>
-
 <style>
 .carousel {
   position: relative;
@@ -166,6 +196,10 @@ export default {
   font-size: 1.7rem;
   color:  #09c2dd;
   margin-bottom: 10px;
+}
+.fa-magnifying-glass:hover{
+  color: black;
+  cursor: pointer;
 }
 .titolo {
   list-style: none;
