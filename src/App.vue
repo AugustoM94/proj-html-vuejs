@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import HeaderAppUp from './components/HeaderAppUp.vue';
 import HeaderAppDown from './components/HeaderAppdown.vue';
 import OurHistoryApp from './components/OurHistoryApp.vue';

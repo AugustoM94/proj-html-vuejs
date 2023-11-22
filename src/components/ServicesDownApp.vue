@@ -1,5 +1,6 @@
 <template>
-    <div class="container ">
+    <div class="box-image">
+        <div class="container">
         <h2 >Services</h2>
         <div class="line">
             <div class="black"></div>
@@ -85,6 +86,7 @@
         </div>
       </div>
     </div>
+    </div>
   </template>
   
   <script>
@@ -101,16 +103,19 @@
   </script>
 
 <style lang="css" scoped>
-.container{
+.box-image{
     background-image: url(../assets/images/bg6.jpg);
     width: 100%;
-    transform: scale(1.1);
-    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+
 }
-.container h2{
+ h2{
     text-align: center;
     font-size: 3em;
-    margin-top: 70px;
+    padding: 20px;
 }
 .line {
   display: flex;
@@ -148,11 +153,5 @@ p{
     line-height: 1.8em;
     color: #5e5e5e;
 }
-.jet-services .jet-services__icon {
-    text-align: center;
-    margin: 10px 0;
-    padding: 40px 0;
-    background-color: #09C2DD;
-    border-radius: 50%;
-}
+
 </style>
