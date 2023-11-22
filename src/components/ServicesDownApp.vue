@@ -1,6 +1,6 @@
 <template>
     <div class="box-image">
-        <div class="container">
+        <div class="container py-5">
         <h2 >Services</h2>
         <div class="line">
             <div class="black"></div>
@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-lg-4">
             <div class="mb-4">
-                <span class="jet-elements-icon"><i  class="fa-solid fa-anchor" style="color: #ffffff;"></i></span>
+                <span><i  class="fa-solid fa-anchor" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
@@ -24,7 +24,7 @@
         
   <div class="col-lg-4">
     <div class="mb-4">
-                <span class="jet-elements-icon"><i   class="fa-regular fa-user" style="color: #ffffff;"></i></span>
+                <span><i   class="fa-regular fa-user" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
@@ -36,7 +36,7 @@
   </div>
         <div class="col-lg-4">
             <div class="mb-4">
-                <span class="jet-elements-icon"><i  class="fa-solid fa-truck-fast" style="color: #ffffff;"></i></span>
+                <span><i  class="fa-solid fa-truck-fast" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
@@ -50,7 +50,7 @@
       <div class="row">
         <div class="col-lg-4">
             <div class="mb-4 mt-5">
-                <span class="jet-elements-icon"><i  class="fa-regular fa-star" style="color: #ffffff;"></i></span>
+                <span><i  class="fa-regular fa-star" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
@@ -62,7 +62,7 @@
       </div>
         <div class="col-lg-4">
             <div class="mb-4 mt-5">
-                <span class="jet-elements-icon"><i   class="fa-regular fa-thumbs-up" style="color: #ffffff;"></i></span>
+                <span><i   class="fa-regular fa-thumbs-up" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
@@ -74,7 +74,7 @@
       </div>
         <div class="col-lg-4">
             <div class="mb-4 mt-5">
-                <span class="jet-elements-icon"><i class="fa-solid   fa-suitcase" style="color: #ffffff;"></i></span>
+                <span><i class="fa-solid   fa-suitcase" style="color: #ffffff;"></i></span>
                 <h3>Yatch Rentals</h3>
             </div>
             <div>
