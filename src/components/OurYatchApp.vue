@@ -91,6 +91,8 @@ h2{
 .col-lg-3{
     position: relative;
     overflow: hidden;
+    border-radius: 5%;
+
 }
 .line {
   display: flex;
@@ -115,6 +117,7 @@ h2{
     font-weight: 300;
 
 }
+
 a{
     color: #09C2DD;
 
