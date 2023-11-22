@@ -31,7 +31,7 @@
   };
   </script>
   
-  <style lang="scss" scoped>
+  <style lang="css" scoped>
   .box-image {
     position: relative;
     overflow: hidden;
@@ -40,7 +40,7 @@
   
   .content {
     position: absolute;
-    top: 10%;
+    top: 5%;
     right:0;
     left: 50%;
     max-width: 700px;
@@ -92,7 +92,7 @@
 }
 .content  p{
     font-size: 1.3rem;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .font-w{
     font-weight: 700;
