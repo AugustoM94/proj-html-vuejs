@@ -3,6 +3,7 @@
     <HeaderAppDown />
     <OurHistoryApp/>
     <ServicesApp />
+    <ServicesDownApp/>
 </template>
 
 <script>
@@ -11,6 +12,7 @@ import HeaderAppUp from './components/HeaderAppUp.vue';
 import HeaderAppDown from './components/HeaderAppdown.vue';
 import OurHistoryApp from './components/OurHistoryApp.vue';
 import ServicesApp from './components/ServicesApp.vue';
+import ServicesDownApp from './components/ServicesDownApp.vue';
 
 
 
@@ -20,7 +22,8 @@ import ServicesApp from './components/ServicesApp.vue';
     HeaderAppUp,
     HeaderAppDown,
     OurHistoryApp,
-    ServicesApp
+    ServicesApp,
+    ServicesDownApp
     
   },
   }
