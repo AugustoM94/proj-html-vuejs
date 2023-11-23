@@ -1,11 +1,11 @@
 <template>
   <div class="carousel w-100 ">
     <transition name="fade">
-      <img :key="currentIndex" :src="images[currentIndex]" alt="Carousel Image" @mousedown="startAutoPlay" @mouseup="stopAutoPlay" @mouseleave="stopAutoPlay" class="carousel-image" />
+      <img :key="currentIndex" :src="images[currentIndex]" alt="Carousel Image" @mousedown.prevent="startAutoPlay" @mouseup.prevent="stopAutoPlay" @mouseleave.prevent="stopAutoPlay" class="carousel-image" />
     </transition>
 
-    <div class="indicators">
-      <span v-for="(image, index) in images" :key="index" @click.prevent.native="goToImage(index)" :class="{ active: index === currentIndex }"></span>
+    <div class="indicators mb-5">
+      <span v-for="(image, index) in images" :key="index" @click.prevent="goToImage(index)" :class="{ active: index === currentIndex }"></span>
     </div>
 
     <div v-if="currentIndex === 0" class=" overlay-menu row align-items-center mt-2 ">
@@ -45,8 +45,15 @@
         </div>
             </div>
          <div class="col-lg-3 d-flex justify-content-end   ">    
-               <i class="fa-solid fa-magnifying-glass"></i>
+               <i class="fa-solid fa-magnifying-glass" @click="openSearch"></i>
         </div>
+        <div v-if="showSearch" class="search-popup">
+          <div class="d-flex justify-content-center align-content-center">
+            <input type="text" placeholder="Enter Keyword" class="search-input">
+            <i class="fa-solid fa-search search-icon ms-3"></i>
+          </div>
+            <i class="fa-solid fa-times close-icon" @click="closeSearch"></i>
+       </div>
         <div class="titolo"> 
                   <h1>QuickWind</h1>
                   <p>all kinds of boats, yachts characters and sailing destinations <br> for hobbyst yachtsmen and women</p> 
@@ -86,6 +93,7 @@ export default {
     autoPlayInterval: null,
     zoomed: false,
     showSubmenu: false,
+    showSearch: false,
     submenuItems: [
       { label: 'Cruisers', link: '#' },
       { label: 'Expresses', link: '#' },
@@ -120,6 +128,13 @@ export default {
     toggleDropdown(menuItem) {
       this.showSubmenu = menuItem === 'Yachts';
       
+    },
+    openSearch() {
+      this.showSearch = true;
+    },
+
+    closeSearch() {
+      this.showSearch = false;
     },
   },
 }
@@ -286,7 +301,6 @@ a:hover{
   z-index: 1000; 
   top: 100%; 
   left: 0%; 
-  margin-top: 10px;
   min-width: 200px;
 
 
@@ -313,5 +327,64 @@ a:hover{
 }
 .dropdown-content ul {
   padding-left: 0;
+}
+.fa-search {
+  font-size: 1.7rem;
+  color:  #09c2dd;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.fa-search:hover {
+  color: black;
+}
+
+.search-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-input {
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid white; 
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.search-icon:hover {
+  color: #09c2dd;
+}
+
+.close-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+.close-icon:hover {
+  color: #09c2dd;
 }
 </style>

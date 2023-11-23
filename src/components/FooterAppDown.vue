@@ -1,5 +1,4 @@
 <template>
-    <div>
       <section>
           <div class="row">
             <div class="col-lg-6 d-flex">
@@ -35,12 +34,11 @@
             </div>
           </div>
       </section>
-    </div>
   </template>
   
   <script>
   export default {
-    // Your component logic goes here
+  
   };
   </script>
   

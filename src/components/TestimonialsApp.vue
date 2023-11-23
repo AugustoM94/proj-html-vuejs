@@ -24,7 +24,6 @@
             </div>
           </div>
         </div>
-  
         <div class="indicators">
           <span
             v-for="(testimonial, index) in testimonials"
@@ -62,7 +61,8 @@
             text: "I am an event manager who works for one of the Fortune 500 US-based companies. From time to time, we throw some awesome corporate, large-scale corporate events, as a gesture of appreciation to our employees. Yacht chartering is one of those!",
             author: "-Mary Adwetto",
           },
-        ],      };
+        ],     
+       };
     },
     methods: {
       goToImage(index) {
@@ -80,11 +80,23 @@
           this.currentIndex = newIndex;
         }
       },
-    },
-  };
+}
+}
   </script>
   
   <style lang="css" scoped>
+  .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.scroll-to-top i {
+  color: black;
+  font-size: 20px;
+}
   section {
     margin: 0;
     background-image: url(../assets/images/bg8.jpg);
