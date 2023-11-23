@@ -9,6 +9,7 @@
     <YachtsmenApp/>
     <TestimonialsApp/> 
     <FooterAppUp/>
+    <FooterAppDown/>
 </template>
 
 <script>
@@ -22,7 +23,7 @@ import EnjoyApp from './components/EnjoyApp.vue';
 import YachtsmenApp from './components/YachtsmenApp.vue';
 import TestimonialsApp from './components/TestimonialsApp.vue';
 import FooterAppUp from './components/FooterAppUp.vue';
-
+import FooterAppDown from './components/FooterAppDown.vue';
   export default {
     name: 'App',
   components: {
@@ -35,7 +36,8 @@ import FooterAppUp from './components/FooterAppUp.vue';
     EnjoyApp,
     YachtsmenApp,
     TestimonialsApp,
-    FooterAppUp
+    FooterAppUp,
+    FooterAppDown
     
   },
   }
