@@ -5,6 +5,8 @@
     <ServicesApp />
     <ServicesDownApp/>
     <OurYatchApp/>
+    <EnjoyApp/>
+    
 </template>
 
 <script>
@@ -14,6 +16,7 @@ import OurHistoryApp from './components/OurHistoryApp.vue';
 import ServicesApp from './components/ServicesApp.vue';
 import ServicesDownApp from './components/ServicesDownApp.vue';
 import OurYatchApp from './components/OurYatchApp.vue';
+import EnjoyApp from './components/EnjoyApp.vue';
 
 
 
@@ -25,7 +28,8 @@ import OurYatchApp from './components/OurYatchApp.vue';
     OurHistoryApp,
     ServicesApp,
     ServicesDownApp,
-    OurYatchApp
+    OurYatchApp,
+    EnjoyApp
     
   },
   }

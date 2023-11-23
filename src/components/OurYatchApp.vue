@@ -5,10 +5,11 @@
             <div class="line"></div>
             <div class="row">
                 <div class="col-lg-3 ">
-                    <img src="../assets/images/services-1.jpg" alt="logo-1">
+                    <img  src="../assets/images/services-1.jpg" alt="logo-1">
                     <div class=" icon-hover text-center ">
                         <a href="#"><i class="fas fa-anchor"></i></a>
                         <h3 class="text-white">Express</h3>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 ">
@@ -131,8 +132,12 @@ a{
 }
 .col-lg-3:hover  {
     cursor: pointer;
-
 } 
+img:hover{
+    filter: grayscale(100%);
+
+}    
+
 .center-btn {
     display: flex;
     justify-content: center;
@@ -143,10 +148,15 @@ a{
     color: white;
     font-size: 0.9rem;
     border-radius: 5px;
-    padding: 10px 30px;
+    padding: 15px 30px;
     background-color: #09c2dd;
     font-family: 'Poppins', sans-serif;
     border: 1px solid white;
+    font-weight: 300;
     
+}
+.btn:hover{
+    background-color: white;
+    color: black;
 }
 </style>
