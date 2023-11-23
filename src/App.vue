@@ -8,6 +8,7 @@
     <EnjoyApp/>
     <YachtsmenApp/>
     <TestimonialsApp/> 
+    <FooterAppUp/>
 </template>
 
 <script>
@@ -20,7 +21,7 @@ import OurYatchApp from './components/OurYatchApp.vue';
 import EnjoyApp from './components/EnjoyApp.vue';
 import YachtsmenApp from './components/YachtsmenApp.vue';
 import TestimonialsApp from './components/TestimonialsApp.vue';
-
+import FooterAppUp from './components/FooterAppUp.vue';
 
   export default {
     name: 'App',
@@ -33,7 +34,8 @@ import TestimonialsApp from './components/TestimonialsApp.vue';
     OurYatchApp,
     EnjoyApp,
     YachtsmenApp,
-    TestimonialsApp
+    TestimonialsApp,
+    FooterAppUp
     
   },
   }
